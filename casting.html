@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page</title>
+<title>Book Talent - GloCaster</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f4f4;text-align:center;}
+nav{background:black;padding:15px;}
+nav a{color:white;margin:15px;text-decoration:none;font-weight:bold;}
+.box{padding:80px;}
+</style>
 </head>
 <body>
-<h1>Coming Soon</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="explore.html">Fun Zone</a>
+<a href="artist.html">Join as Talent</a>
+<a href="casting.html">Book Talent</a>
+</nav>
+
+<div class="box">
+<h1>Book Talent</h1>
+<p>Search, Shortlist, Hire Talent</p>
+<p>Casting by Dev Casting</p>
+<p>Coming Soon...</p>
+</div>
+
+<script>
+let role = localStorage.getItem("glocaster_role");
+if(!role){
+  window.location.href="index.html";
+}
+</script>
+
 </body>
 </html>
