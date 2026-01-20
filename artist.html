@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page</title>
+<title>Talent Dashboard - GloCaster</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f4f4;text-align:center;}
+nav{background:black;padding:15px;}
+nav a{color:white;margin:15px;text-decoration:none;font-weight:bold;}
+.box{padding:80px;}
+</style>
 </head>
 <body>
-<h1>Coming Soon</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="explore.html">Fun Zone</a>
+<a href="artist.html">Talent</a>
+<a href="casting.html">Book Talent</a>
+</nav>
+
+<div class="box">
+<h1>Talent Dashboard</h1>
+<p>Create Profile, Upload Videos, Get Casted</p>
+<p>Coming Soon...</p>
+</div>
+
+<script>
+let role = localStorage.getItem("glocaster_role");
+if(!role){
+  window.location.href="index.html";
+}
+</script>
+
 </body>
 </html>
