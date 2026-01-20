@@ -20,6 +20,7 @@ text-decoration:none;
 font-size:18px;
 border-radius:8px;
 transition:0.3s;
+cursor:pointer;
 }
 .btn:hover{background:#444;}
 .footer{margin-top:80px;color:#777;font-size:14px;}
@@ -27,7 +28,7 @@ transition:0.3s;
 </head>
 <body>
 
-<nav>
+<nav id="nav">
 <a href="index.html">Home</a>
 <a href="explore.html">Fun Zone</a>
 <a href="artist.html">Join as Talent</a>
@@ -40,15 +41,21 @@ transition:0.3s;
 <p>Global Talent & Creator Universe</p>
 
 <div class="btns">
-<a class="btn" href="explore.html">Fun Zone</a>
-<a class="btn" href="artist.html">Join as Talent</a>
-<a class="btn" href="casting.html">Book Talent</a>
+<a class="btn" onclick="setRole('fun')" href="explore.html">Fun Zone</a>
+<a class="btn" onclick="setRole('talent')" href="artist.html">Join as Talent</a>
+<a class="btn" onclick="setRole('recruiter')" href="casting.html">Book Talent</a>
 </div>
 </div>
 
 <div class="footer">
 <p>© GloCaster | Casting by Dev Casting</p>
 </div>
+
+<script>
+function setRole(role){
+  localStorage.setItem("glocaster_role", role);
+}
+</script>
 
 </body>
 </html>
